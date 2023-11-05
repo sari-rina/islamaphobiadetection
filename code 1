@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Fighting Islamophobia</title>
+    <style>
+        body {
+            background-color: #111;
+            font-family: "Times New Roman", Times, serif;
+            font-weight: bold;
+            color: #FFFF99;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #111;
+            padding: 20px 0;
+            text-align: center;
+        }
+        h1 {
+            font-size: 48px;
+            color: #FFFF66;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            padding: 20px;
+            background-color: #111;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin-left: 20px;
+        }
+        .search-bar {
+            width: 70%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #FFFF99;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            background-color: #111;
+            color: #FFFF99;
+            display: inline-block;
+        }
+        .btn {
+            background-color: #F5A623;
+            color: #FFFF99;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #FF7F00;
+        }
+        .contact-me {
+            background-color: #111;
+            color: #FFFF99;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        .nav-menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-item {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        .nav-item a {
+            text-decoration: none;
+            color: #FFFF99;
+            font-weight: bold;
+        }
+        .about-section {
+            text-align: left;
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="#about">About Us</a></li>
+            <li class="nav-item"><a href="#contact">Contact Us</a></li>
+        </ul>
+    </div>
+    <header>
+        <h1>Fighting Islamophobia</h1>
+    </header>
+    <div class="container">
+        <h2>Enter Something</h2>
+        <form id="search-form">
+            <input type="text" class="search-bar" placeholder="Enter..." id="search-input">
+            <input type="submit" value="Enter" class="btn">
+        </form>
+        <p id="response-message"></p>
+    </div>
+    <div class="about-section" id="about">
+        <h2>About Us</h2>
+        <p>In 2023, the PeacefulPixel project was developed by two groups of interns- one that focused on the back-end and the other on the front-end. The front-end group focused on building the website, utilizing HTML and CSS to design the website and make the model more usable to the public. The back-end group utilized libraries from Python, in particular sckit-learn, to build various machine learning models such as random forests in order to predict whether a news article provided by the user contains bias or not. PeacefulPixel will be beneficial to the Muslim Ummah by informing the Muslim youth and elderly about how to extract accurate information from the web.</p>
+    </div>
+    <div class="contact-us" id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or feedback, feel free to contact Us.</p>
+        <p>Email: <a href="mailto:sarinaneja0@gmail.com" style="color: #FFFF99;">sarinaneja0@gmail.com</a></p>
+    </div>
+    <script>
+        document.getElementById("search-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var searchInput = document.getElementById("search-input").value;
+            var responseMessage = document.getElementById("response-message");
+            responseMessage.textContent = "Your response was saved: " + searchInput;
+        });
+    </script>
+</body>
+</html>
